@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312ECF4C24E515D100CA99CC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECF4B24E515D100CA99CC /* Theme.swift */; };
+		312ECF4F24E5195E00CA99CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312ECF4E24E5195E00CA99CC /* Main.storyboard */; };
+		312ECF8D24E5277A00CA99CC /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECF8C24E5277A00CA99CC /* FlatButton.swift */; };
 		317662F524DEBB3100C3F43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317662F424DEBB3100C3F43F /* AppDelegate.swift */; };
 		317662F724DEBB3100C3F43F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317662F624DEBB3100C3F43F /* SceneDelegate.swift */; };
-		317662F924DEBB3100C3F43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317662F824DEBB3100C3F43F /* ViewController.swift */; };
+		317662F924DEBB3100C3F43F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317662F824DEBB3100C3F43F /* HomeViewController.swift */; };
 		317662FB24DEBB3100C3F43F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317662FA24DEBB3100C3F43F /* Assets.xcassets */; };
-		317662FE24DEBB3100C3F43F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317662FD24DEBB3100C3F43F /* Preview Assets.xcassets */; };
 		3176630124DEBB3100C3F43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317662FF24DEBB3100C3F43F /* LaunchScreen.storyboard */; };
 		3176630A24DEBC3000C3F43F /* Crystal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3176630924DEBC3000C3F43F /* Crystal.framework */; };
 		3176630B24DEBC3000C3F43F /* Crystal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3176630924DEBC3000C3F43F /* Crystal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,12 +34,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		312ECF4B24E515D100CA99CC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		312ECF4E24E5195E00CA99CC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		312ECF8C24E5277A00CA99CC /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		317662F124DEBB3100C3F43F /* Cystal-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cystal-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		317662F424DEBB3100C3F43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317662F624DEBB3100C3F43F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		317662F824DEBB3100C3F43F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		317662F824DEBB3100C3F43F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		317662FA24DEBB3100C3F43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		317662FD24DEBB3100C3F43F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3176630024DEBB3100C3F43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3176630224DEBB3100C3F43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3176630924DEBC3000C3F43F /* Crystal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Crystal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,23 +79,17 @@
 		317662F324DEBB3100C3F43F /* Cystal-Example */ = {
 			isa = PBXGroup;
 			children = (
+				312ECF8C24E5277A00CA99CC /* FlatButton.swift */,
+				312ECF4B24E515D100CA99CC /* Theme.swift */,
+				317662F824DEBB3100C3F43F /* HomeViewController.swift */,
 				317662F424DEBB3100C3F43F /* AppDelegate.swift */,
 				317662F624DEBB3100C3F43F /* SceneDelegate.swift */,
-				317662F824DEBB3100C3F43F /* ViewController.swift */,
 				317662FA24DEBB3100C3F43F /* Assets.xcassets */,
+				312ECF4E24E5195E00CA99CC /* Main.storyboard */,
 				317662FF24DEBB3100C3F43F /* LaunchScreen.storyboard */,
 				3176630224DEBB3100C3F43F /* Info.plist */,
-				317662FC24DEBB3100C3F43F /* Preview Content */,
 			);
 			path = "Cystal-Example";
-			sourceTree = "<group>";
-		};
-		317662FC24DEBB3100C3F43F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				317662FD24DEBB3100C3F43F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		3176630824DEBC3000C3F43F /* Frameworks */ = {
@@ -161,8 +159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312ECF4F24E5195E00CA99CC /* Main.storyboard in Resources */,
 				3176630124DEBB3100C3F43F /* LaunchScreen.storyboard in Resources */,
-				317662FE24DEBB3100C3F43F /* Preview Assets.xcassets in Resources */,
 				317662FB24DEBB3100C3F43F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,8 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				317662F524DEBB3100C3F43F /* AppDelegate.swift in Sources */,
+				312ECF4C24E515D100CA99CC /* Theme.swift in Sources */,
+				312ECF8D24E5277A00CA99CC /* FlatButton.swift in Sources */,
 				317662F724DEBB3100C3F43F /* SceneDelegate.swift in Sources */,
-				317662F924DEBB3100C3F43F /* ViewController.swift in Sources */,
+				317662F924DEBB3100C3F43F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +315,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Cystal-Example/Preview Content\"";
 				DEVELOPMENT_TEAM = DU3H9RK42T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Cystal-Example/Info.plist";
@@ -326,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "app.yunhao.Cystal-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,7 +334,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Cystal-Example/Preview Content\"";
 				DEVELOPMENT_TEAM = DU3H9RK42T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Cystal-Example/Info.plist";
@@ -346,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "app.yunhao.Cystal-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jAQ-AO-wcW">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="sW1-bk-Qkr">
+            <objects>
+                <viewController id="2Ve-VL-fre" customClass="HomeViewController" customModule="Cystal_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tb2-s4-xFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-mS-emG">
+                                <rect key="frame" x="0.0" y="650" width="375" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-mY-SBM">
+                                        <rect key="frame" x="8" y="8" width="359" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-XB-slO" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="bei-xU-tCg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <state key="normal" title="Light">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="flatColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="light"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="changeTheme:" destination="2Ve-VL-fre" eventType="touchUpInside" id="8sa-NN-awD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjS-gl-GBZ" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="171.33333333333337" height="50"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <state key="normal" title="Dark">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="flatColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="dark"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="changeTheme:" destination="2Ve-VL-fre" eventType="touchUpInside" id="4TS-dj-oOW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tjS-gl-GBZ" firstAttribute="height" secondItem="fkh-XB-slO" secondAttribute="height" id="l1f-we-ySB"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V7B-tI-3uf">
+                                        <rect key="frame" x="8" y="70" width="359" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY8-rK-QEb" userLabel="Sea Theme Button" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="50"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <state key="normal" title="Sea">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="flatColor">
+                                                        <color key="value" systemColor="systemBlueColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="sea"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="changeTheme:" destination="2Ve-VL-fre" eventType="touchUpInside" id="QEM-sU-Asm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ3-U3-92M" userLabel="Forest Theme Button" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="171.33333333333337" height="50"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <state key="normal" title="Forest">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="flatColor">
+                                                        <color key="value" systemColor="systemGreenColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="forest"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="changeTheme:" destination="2Ve-VL-fre" eventType="touchUpInside" id="Jn7-I9-rqL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="QcS-Cx-dwc">
+                                <rect key="frame" x="0.0" y="88" width="375" height="562"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-Mb-5vw">
+                                        <rect key="frame" x="112" y="12" width="151" height="151"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ee4-Mb-5vw" secondAttribute="height" multiplier="1:1" id="9Op-a3-0NH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-MA-oq9">
+                                        <rect key="frame" x="0.0" y="153" width="375" height="75.666666666666686"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kqG-k1-PDO">
+                                        <rect key="frame" x="8" y="228.66666666666671" width="359" height="325.33333333333326"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWZ-pZ-Ng9">
+                                                <rect key="frame" x="8" y="0.0" width="343" height="236.33333333333334"/>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                                <string key="text">Crystal is a powerful and intuitive theme manager for iOS. It takes advantage of Swift’s features to provide an easy-to-use interface. With Crystal, you can integrate themes into your app with confidence and flexibility.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBN-d9-Ai4">
+                                                <rect key="frame" x="8" y="248.33333333333331" width="343" height="22"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Is-PD-JZi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Theme" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaH-m4-8x4">
+                                                        <rect key="frame" x="120" y="0.0" width="223" height="22"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnt-6G-uRT">
+                                                <rect key="frame" x="8" y="282.33333333333331" width="343" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-cG-IuN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQ0-YB-Tjz">
+                                                        <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="8" bottom="12" trailing="8"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bMf-MA-oq9" secondAttribute="trailing" id="3Wm-II-vXX"/>
+                                    <constraint firstItem="ee4-Mb-5vw" firstAttribute="width" secondItem="QcS-Cx-dwc" secondAttribute="width" multiplier="0.4" constant="1" id="3eq-YY-Tpu"/>
+                                    <constraint firstItem="ee4-Mb-5vw" firstAttribute="centerX" secondItem="QcS-Cx-dwc" secondAttribute="centerX" id="9ZN-gl-MvL"/>
+                                    <constraint firstItem="bMf-MA-oq9" firstAttribute="height" secondItem="ee4-Mb-5vw" secondAttribute="height" multiplier="0.5" id="9gB-cB-rXI"/>
+                                    <constraint firstItem="bMf-MA-oq9" firstAttribute="top" secondItem="ee4-Mb-5vw" secondAttribute="bottom" constant="-10" id="AiY-vL-FBP"/>
+                                    <constraint firstItem="kqG-k1-PDO" firstAttribute="top" secondItem="bMf-MA-oq9" secondAttribute="bottom" id="CMu-gA-FJA"/>
+                                    <constraint firstItem="bMf-MA-oq9" firstAttribute="leading" secondItem="QcS-Cx-dwc" secondAttribute="leading" id="JBD-NY-mRP"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="kqG-k1-PDO" secondAttribute="trailing" id="LpB-n4-17q"/>
+                                    <constraint firstItem="kqG-k1-PDO" firstAttribute="leading" secondItem="QcS-Cx-dwc" secondAttribute="leadingMargin" id="p0g-K0-5Gs"/>
+                                    <constraint firstItem="ee4-Mb-5vw" firstAttribute="top" secondItem="QcS-Cx-dwc" secondAttribute="top" constant="12" id="qYy-Pc-HA8"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="kqG-k1-PDO" secondAttribute="bottom" id="zNP-u7-EtX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="scI-Io-O3O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scI-Io-O3O" firstAttribute="trailing" secondItem="QcS-Cx-dwc" secondAttribute="trailing" id="4xo-lX-fBq"/>
+                            <constraint firstItem="QcS-Cx-dwc" firstAttribute="bottom" secondItem="8ug-mS-emG" secondAttribute="top" id="Nox-Or-4WO"/>
+                            <constraint firstItem="QcS-Cx-dwc" firstAttribute="leading" secondItem="scI-Io-O3O" secondAttribute="leading" id="Vlx-4X-joc"/>
+                            <constraint firstItem="QcS-Cx-dwc" firstAttribute="top" secondItem="scI-Io-O3O" secondAttribute="top" id="dxL-Zf-n0Z"/>
+                            <constraint firstItem="8ug-mS-emG" firstAttribute="leading" secondItem="scI-Io-O3O" secondAttribute="leading" id="f4n-LP-Dz6"/>
+                            <constraint firstItem="scI-Io-O3O" firstAttribute="trailing" secondItem="8ug-mS-emG" secondAttribute="trailing" id="iVo-Ci-5dU"/>
+                            <constraint firstItem="scI-Io-O3O" firstAttribute="bottom" secondItem="8ug-mS-emG" secondAttribute="bottom" id="rwo-L9-SEK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0fi-Ie-ecw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="7An-LT-XhT">
+                            <connections>
+                                <action selector="refreshTheme:" destination="2Ve-VL-fre" id="Gfo-kg-zHn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animatedLabel" destination="vcC-cG-IuN" id="tjv-oY-aOK"/>
+                        <outlet property="animatedSwitch" destination="zQ0-YB-Tjz" id="xY8-Xl-pJm"/>
+                        <outlet property="currentThemeLabel" destination="7Is-PD-JZi" id="xcy-GC-BXo"/>
+                        <outlet property="currentThemeTextField" destination="zaH-m4-8x4" id="Lcz-AX-0kd"/>
+                        <outlet property="descriptionTextView" destination="eWZ-pZ-Ng9" id="1AM-SR-0oW"/>
+                        <outlet property="logoView" destination="ee4-Mb-5vw" id="4ix-nG-z62"/>
+                        <outlet property="nameView" destination="bMf-MA-oq9" id="M7K-c0-wyF"/>
+                        <outlet property="refreshBarButtonItem" destination="7An-LT-XhT" id="dCk-Lx-ivU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Me2-Oq-RX6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="-47"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y2d-AH-UK2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jAQ-AO-wcW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kj7-b4-usc">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Ve-VL-fre" kind="relationship" relationship="rootViewController" id="nh1-F5-RHu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hte-YK-MWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-435" y="-48"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="HZ3-U3-92M">
+            <size key="intrinsicContentSize" width="51" height="23"/>
+        </designable>
+        <designable name="fkh-XB-slO">
+            <size key="intrinsicContentSize" width="41" height="23"/>
+        </designable>
+        <designable name="tjS-gl-GBZ">
+            <size key="intrinsicContentSize" width="38" height="23"/>
+        </designable>
+        <designable name="xY8-rK-QEb">
+            <size key="intrinsicContentSize" width="30" height="23"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="logo" width="512" height="512"/>
+        <image name="name" width="732" height="215"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
