@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Crystal"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A lightweight and intuitive theme manager for iOS."
 
   spec.description  = <<-DESC
@@ -13,16 +13,17 @@ Pod::Spec.new do |spec|
                     DESC
 
   spec.homepage     = "https://github.com/yunhao/Crystal"
+  spec.screenshots  = "https://raw.githubusercontent.com/yunhao/Crystal/master/Resources/logo.png"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Rhett Tuan" => "rhetttuan@gmail.com" }
 
+  spec.swift_versions = ['5.2']
+
   spec.ios.deployment_target = "10.0"
-  spec.osx.deployment_target = "10.12"
 
   spec.source       = { :git => "https://github.com/yunhao/Crystal.git", :tag => "v#{spec.version}" }
 
   spec.source_files  = "Sources", "Sources/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
 
   spec.requires_arc = true
 end

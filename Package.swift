@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Crystal",
-    platforms: [.iOS(.v10), .macOS(.v10_12)],
+    platforms: [.iOS(.v10)],
     products: [
         .library(
             name: "Crystal",
