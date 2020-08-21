@@ -37,7 +37,7 @@
 		312ECF4B24E515D100CA99CC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		312ECF4E24E5195E00CA99CC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		312ECF8C24E5277A00CA99CC /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
-		317662F124DEBB3100C3F43F /* Cystal-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cystal-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		317662F124DEBB3100C3F43F /* Crystal-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crystal-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		317662F424DEBB3100C3F43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317662F624DEBB3100C3F43F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		317662F824DEBB3100C3F43F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		317662F224DEBB3100C3F43F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				317662F124DEBB3100C3F43F /* Cystal-Example.app */,
+				317662F124DEBB3100C3F43F /* Crystal-Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		317662F024DEBB3100C3F43F /* Cystal-Example */ = {
+		317662F024DEBB3100C3F43F /* Crystal-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3176630524DEBB3100C3F43F /* Build configuration list for PBXNativeTarget "Cystal-Example" */;
+			buildConfigurationList = 3176630524DEBB3100C3F43F /* Build configuration list for PBXNativeTarget "Crystal-Example" */;
 			buildPhases = (
 				317662ED24DEBB3100C3F43F /* Sources */,
 				317662EE24DEBB3100C3F43F /* Frameworks */,
@@ -116,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = "Cystal-Example";
+			name = "Crystal-Example";
 			productName = "Cystal-Example";
-			productReference = 317662F124DEBB3100C3F43F /* Cystal-Example.app */;
+			productReference = 317662F124DEBB3100C3F43F /* Crystal-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 317662EC24DEBB3100C3F43F /* Build configuration list for PBXProject "Cystal-Example" */;
+			buildConfigurationList = 317662EC24DEBB3100C3F43F /* Build configuration list for PBXProject "Crystal-Example" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -149,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				317662F024DEBB3100C3F43F /* Cystal-Example */,
+				317662F024DEBB3100C3F43F /* Crystal-Example */,
 			);
 		};
 /* End PBXProject section */
@@ -317,12 +317,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU3H9RK42T;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Cystal-Example/Info.plist";
+				INFOPLIST_FILE = "Crystal-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "app.yunhao.Cystal-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.yunhao.Crystal-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -336,12 +336,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU3H9RK42T;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Cystal-Example/Info.plist";
+				INFOPLIST_FILE = "Crystal-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "app.yunhao.Cystal-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.yunhao.Crystal-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -351,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		317662EC24DEBB3100C3F43F /* Build configuration list for PBXProject "Cystal-Example" */ = {
+		317662EC24DEBB3100C3F43F /* Build configuration list for PBXProject "Crystal-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3176630324DEBB3100C3F43F /* Debug */,
@@ -360,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3176630524DEBB3100C3F43F /* Build configuration list for PBXNativeTarget "Cystal-Example" */ = {
+		3176630524DEBB3100C3F43F /* Build configuration list for PBXNativeTarget "Crystal-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3176630624DEBB3100C3F43F /* Debug */,
