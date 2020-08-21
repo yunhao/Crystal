@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "317662F024DEBB3100C3F43F"
-               BuildableName = "Cystal-Example.app"
-               BlueprintName = "Cystal-Example"
-               ReferencedContainer = "container:Cystal-Example.xcodeproj">
+               BuildableName = "Crystal-Example.app"
+               BlueprintName = "Crystal-Example"
+               ReferencedContainer = "container:Crystal-Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "317662F024DEBB3100C3F43F"
-            BuildableName = "Cystal-Example.app"
-            BlueprintName = "Cystal-Example"
-            ReferencedContainer = "container:Cystal-Example.xcodeproj">
+            BuildableName = "Crystal-Example.app"
+            BlueprintName = "Crystal-Example"
+            ReferencedContainer = "container:Crystal-Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "317662F024DEBB3100C3F43F"
-            BuildableName = "Cystal-Example.app"
-            BlueprintName = "Cystal-Example"
-            ReferencedContainer = "container:Cystal-Example.xcodeproj">
+            BuildableName = "Crystal-Example.app"
+            BlueprintName = "Crystal-Example"
+            ReferencedContainer = "container:Crystal-Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,0 +1,32 @@
+name: build
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Run Test
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: [
+          'iOS Simulator,name=iPhone 11'
+        ]
+        swift-version: [5.2]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      id: cache-bundler
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Set Bundle Path
+      run: bundle config path vendor/bundle
+    - name: Bundle install
+      if: steps.cache-bundler.outputs.cache-hit != 'true'
+      run: bundle install --jobs 4 --retry 3
+    - name: Run tests
+      env:
+        DESTINATION: platform=${{ matrix.destination }}
+        SWIFT_VERSION: ${{ matrix.swift-version }}
+      run: bundle exec fastlane tests_ci

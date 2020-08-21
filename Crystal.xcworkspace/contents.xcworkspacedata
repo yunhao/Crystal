@@ -5,6 +5,6 @@
       location = "group:Crystal.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/yunhao/Developer/iOS/Crystal/Example/Cystal-Example.xcodeproj">
+      location = "group:/Users/yunhao/Developer/iOS/Crystal/Example/Crystal-Example.xcodeproj">
    </FileRef>
 </Workspace>
