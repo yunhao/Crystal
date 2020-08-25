@@ -62,7 +62,7 @@
 		317662E824DEBB3100C3F43F = {
 			isa = PBXGroup;
 			children = (
-				317662F324DEBB3100C3F43F /* Cystal-Example */,
+				317662F324DEBB3100C3F43F /* Crystal-Example */,
 				317662F224DEBB3100C3F43F /* Products */,
 				3176630824DEBC3000C3F43F /* Frameworks */,
 			);
@@ -76,7 +76,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		317662F324DEBB3100C3F43F /* Cystal-Example */ = {
+		317662F324DEBB3100C3F43F /* Crystal-Example */ = {
 			isa = PBXGroup;
 			children = (
 				312ECF8C24E5277A00CA99CC /* FlatButton.swift */,
@@ -89,7 +89,7 @@
 				317662FF24DEBB3100C3F43F /* LaunchScreen.storyboard */,
 				3176630224DEBB3100C3F43F /* Info.plist */,
 			);
-			path = "Cystal-Example";
+			path = "Crystal-Example";
 			sourceTree = "<group>";
 		};
 		3176630824DEBC3000C3F43F /* Frameworks */ = {
@@ -117,7 +117,7 @@
 			dependencies = (
 			);
 			name = "Crystal-Example";
-			productName = "Cystal-Example";
+			productName = "Crystal-Example";
 			productReference = 317662F124DEBB3100C3F43F /* Crystal-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -317,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU3H9RK42T;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Crystal-Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Crystal-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU3H9RK42T;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Crystal-Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Crystal-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

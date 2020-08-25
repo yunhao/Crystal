@@ -34,4 +34,94 @@ platform :ios do
       destination: options[:destination]
     )
   end
+
+  desc "Draft Releases"
+  lane :draft_release do |options|
+    if bump_type = options[:bump_type]
+      make_draft_release(
+        bump_type: bump_type
+      )
+    else
+      make_draft_release
+    end
+  end
+
+  desc "New Release"
+  lane :release do |options|
+    # Get and validate the draft-release file
+    draft = validate_draft_release
+
+    # The new version to release
+    target_version = draft["target"]["version"]
+    # Use the number of commits as the build number
+    build_number = draft["target"]["build"]
+
+    # Continue or cancel
+    confirmed = UI.confirm("Are you sure to release the new version [#{target_version}] with tag [#{draft["target"]["tag"]}] ?")
+    UI.abort_with_message! "The release process is canceled" unless confirmed
+
+    ensure_git_branch(
+      branch: 'master'
+    )
+    ensure_git_status_clean(
+      show_uncommitted_changes: true
+    )
+    
+    pod_lib_lint
+    
+    # Update build and version number in Info.plist and Crystal.xcodeproj
+    increment_build_number(build_number: build_number)
+    increment_version_number(version_number: target_version)
+
+    version_bump_podspec(path: "Crystal.podspec", version_number: target_version)
+    
+    # Update documentation
+    doc(version: target_version)
+
+    # Update CHANGELOG.md from DRAFT_RELEASE.yml file
+    changelog = update_changelog
+    
+    # Commit version bump
+    bump_message = "Bump to v#{target_version}"
+    commit_version_bump(
+      message: bump_message
+    )
+
+    # Create new tag
+    Actions.sh("git tag -s v#{target_version} -m ''")
+    
+    # Push all commits and tag to remote
+    push_to_git_remote
+    
+    set_github_release(
+      repository_name: "yunhao/Crystal",
+      api_token: ENV['GITHUB_TOKEN'],
+      name: changelog[:version],
+      tag_name: changelog[:tag],
+      description: changelog[:release_message]
+    )
+    
+    pod_push
+  end
+
+  desc "Generate documentation"
+  lane :doc do |options|
+    target_version = options[:version]
+    UI.user_error! "The version number is missing. You must specify a target version" unless target_version
+
+    UI.success "Update documentaion for #{target_version}"
+
+    Actions.sh("cd .. && jazzy \
+      --clean \
+      -x USE_SWIFT_RESPONSE_FILE=NO \
+      --author \"yunhao\" \
+      --author_url https://github.com/yunhao \
+      --github_url https://github.com/yunhao/Crystal \
+      --github-file-prefix https://github.com/yunhao/Crystal/tree/v#{target_version} \
+      --module-version v#{target_version} \
+      --module Crystal \
+      --root-url http://yunhao.github.io/Crystal/ \
+      --output docs/ \
+      --theme fullwidth")
+  end
 end

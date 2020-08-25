@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="sW1-bk-Qkr">
             <objects>
-                <viewController id="2Ve-VL-fre" customClass="HomeViewController" customModule="Cystal_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ve-VL-fre" customClass="HomeViewController" customModule="Crystal_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tb2-s4-xFd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-mY-SBM">
                                         <rect key="frame" x="8" y="8" width="359" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-XB-slO" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-XB-slO" customClass="FlatButton" customModule="Crystal_Example" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="bei-xU-tCg"/>
@@ -45,7 +45,7 @@
                                                     <action selector="changeTheme:" destination="2Ve-VL-fre" eventType="touchUpInside" id="8sa-NN-awD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjS-gl-GBZ" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjS-gl-GBZ" customClass="FlatButton" customModule="Crystal_Example" customModuleProvider="target">
                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="171.33333333333337" height="50"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="Dark">
@@ -69,7 +69,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V7B-tI-3uf">
                                         <rect key="frame" x="8" y="70" width="359" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY8-rK-QEb" userLabel="Sea Theme Button" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY8-rK-QEb" userLabel="Sea Theme Button" customClass="FlatButton" customModule="Crystal_Example" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="50"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="Sea">
@@ -85,7 +85,7 @@
                                                     <action selector="changeTheme:" destination="2Ve-VL-fre" eventType="touchUpInside" id="QEM-sU-Asm"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ3-U3-92M" userLabel="Forest Theme Button" customClass="FlatButton" customModule="Cystal_Example" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ3-U3-92M" userLabel="Forest Theme Button" customClass="FlatButton" customModule="Crystal_Example" customModuleProvider="target">
                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="171.33333333333337" height="50"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="Forest">

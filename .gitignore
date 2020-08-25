@@ -4,6 +4,7 @@
 
 ### Xcode ###
 
+build/
 xcuserdata/
 
 ### Swift Package Manager ###
@@ -20,3 +21,5 @@ fastlane/screenshots/**/*.png
 fastlane/screenshots/screenshots.html
 fastlane/test_output
 fastlane/README.md
+fastlane/.env
+DRAFT_RELEASE.yml
