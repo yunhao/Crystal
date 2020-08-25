@@ -1,5 +1,25 @@
 <p align="center">
-<img src="./Resources/logo.png" alt="Crystal" title="Crystal" width="500"/>
+    <img src="https://raw.githubusercontent.com/yunhao/Crystal/master/Resources/logo.png" alt="Crystal" title="Crystal" width="500"/>
+</p>
+
+<p align="center">
+    <a href="https://github.com/yunhao/Crystal/actions?query=workflow%3Abuild">
+        <img src="https://github.com/yunhao/Crystal/workflows/build/badge.svg?branch=master">
+    </a>
+    <a href="https://cocoapods.org/pods/Crystal">
+        <img src="https://img.shields.io/cocoapods/v/Crystal.svg">
+    </a>
+    <a href="https://swift.org/package-manager/">
+        <img alt="SPM support" src="https://img.shields.io/badge/SwiftPM-supported-FF6255">
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-yellow.svg"/>
+    </a>
+    <br/>
+    <a href="https://github.com/yunhao/Crystal/blob/master/LICENSE">
+        <img alt="GitHub license" src="https://img.shields.io/github/license/yunhao/Crystal">
+    </a>
+    <img alt="Cocoapods platforms" src="https://img.shields.io/cocoapods/p/Crystal">
 </p>
 
 ---
@@ -7,7 +27,7 @@
 Crystal is a lightweight and intuitive theme manager for iOS. It takes advantage of Swift’s features to provide an easy-to-use interface. With Crystal, you can integrate themes into your app with confidence and flexibility.
 
 <p align="center">
-<img src="./Resources/crystal-example.gif" alt="Crystal" title="Crystal" width="150"/>
+<img src="https://raw.githubusercontent.com/yunhao/Crystal/master/Resources/crystal-example.gif" alt="Crystal" title="Crystal" width="150"/>
 </p>
 
 ## Feature
@@ -17,10 +37,19 @@ Crystal is a lightweight and intuitive theme manager for iOS. It takes advantage
 - **Simple**: Adding a theme is as simple as creating an instance. It's easy to maintain your themes with Crystal.
 - **Type Safe**: Take full advantage of swift's type safety. Apply your theme with confidence and benefit from compile-time check.
 
+## Getting Started
+
+* [Usage](#Usage)
+* [Requirements](#Requirements)
+* [Installation](#Installation)
+* [API Documentation](https://yunhao.github.io/Crystal)
+* [Example App](https://github.com/yunhao/Crystal/blob/master/Example)
 
 ## Usage
 
-### Define Theme Type
+To use Crystal, there are three steps: [Define Theme Type](#Define-Theme-Type) -> [Make Compatible](#Make-Compatible) -> [Apply Theme](#Apply-Theme)
+
+### Setp 1 - Define Theme Type
 
 You can introduce your theme type by making `class` or `struct` conform to `CrystalThemeType` protocol. With this protocol, you have to implement a static property to return the default theme.
 
@@ -52,7 +81,7 @@ extension AppTheme: CrystalThemeType {
 }
 ```
 
-### Make Compatible
+### Setp 2 - Make Compatible
 
 In order to tell Crystal about your theme type:
 - Make `Crystal` conform to `CrystalDetermined`. 
@@ -78,9 +107,9 @@ extension UIBarButtonItem: CrystalCompatible {
 Any object that conforms to `CrystalCompatible` protocol has a `cst` namespace for exposing Crystal methods.
 
 
-### Apply Theme
+### Step 3 - Apply Theme
 
-Use the `apply(key:_:)` method to apply theme. The `key` parameter can be omitted and the default  `key` value will be used.
+Use the `apply(_:)` method to apply theme and you can do whatever you want in the closure:
 
 ```swift
 // Apply theme to a button.
@@ -96,28 +125,48 @@ cardView.cst.apply { card, theme in
 imageView.cst.apply { $0.tintColor = $1.textColor }
 ```
 
-When you call this method on an object multiple times, the `key` parameter is used to distinguish different calls. If the same `key` value is used, only the last call takes effect. This behavior is intended to avoid unintentional and redundant calls.
-
-```swift
-// Set font.
-textLabel.cst.apply(key: "font") { label, theme in
-    label.font = theme.font
-}
-// Set text color. Will be discarded.
-textLabel.cst.apply(key: "text color") { label, theme in
-    label.textColor = .black
-}
-// Overwrite the previous call.
-textLabel.cst.apply(key: "text color") { label, theme in
-    label.textColor = theme.textColor
-}
-```
-
-### Change Theme
-
-Use the `setTheme(_:animated:)` method to change theme.
+Use the `Crystal.shared.setTheme(_:animated:)` method to change theme:
 
 ```swift
 // Change theme with animation.
 Crystal.shared.setTheme(.dark, animated: true)
 ```
+
+## Requirements
+
+- Swift 5.0+
+- iOS 10.0+
+
+## Installation
+
+### CocoaPods
+
+When using [CocoaPods](https://cocoapods.org), add the following to your `Podfile`:
+
+```ruby
+pod 'Crystal'
+```
+
+### Carthage
+
+For [Carthage](https://github.com/Carthage/Carthage), add the following to your `Cartfile`:
+
+```ruby
+github "yunhao/Crystal"
+```
+
+### Swift Package Manager
+
+Add the following to the dependencies section of your `Package.swift` file:
+
+```swift
+.package(url: "https://github.com/yunhao/Crystal.git", from: "1.0.0")
+```
+
+## Contribution
+
+Pull requests, bug reports and feature requests are welcome.
+
+## License
+
+Crystal is released under the [MIT License](https://github.com/yunhao/Crystal-Test/blob/master/LICENSE).
