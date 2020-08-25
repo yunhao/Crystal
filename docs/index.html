@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crystal  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Crystal  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Crystal v0.0.2 Docs
+        </a>
+         (75% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/yunhao/Crystal">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://http%3A%2F%2Fyunhao.github.io%2FCrystal%2Fdocsets%2FCrystal.xml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Crystal Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Crystal  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Crystal.html">Crystal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Crystalline.html">Crystalline</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CrystalCompatible.html">CrystalCompatible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CrystalDetermined.html">CrystalDetermined</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/CrystalThemeType.html">CrystalThemeType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <p align="center">
+<img src="./Resources/logo.png" alt="Crystal" title="Crystal" width="500"/>
+</p>
+
+<hr>
+
+<p>Crystal is a lightweight and intuitive theme manager for iOS. It takes advantage of Swift’s features to provide an easy-to-use interface. With Crystal, you can integrate themes into your app with confidence and flexibility.</p>
+
+<p align="center">
+<img src="./Resources/crystal-example.gif" alt="Crystal" title="Crystal" width="150"/>
+</p>
+<h2 id='feature' class='heading'>Feature</h2>
+
+<ul>
+<li><strong>Flexible</strong>: Crystal is compitible with any object, not just built-in UI components. You can use Crystal anywhere.</li>
+<li><strong>Friendly</strong>: Apply themes in a way you&rsquo;re familiar with, and no additional property APIs will make you confused and distracted.</li>
+<li><strong>Simple</strong>: Adding a theme is as simple as creating an instance. It&rsquo;s easy to maintain your themes with Crystal.</li>
+<li><strong>Type Safe</strong>: Take full advantage of swift&rsquo;s type safety. Apply your theme with confidence and benefit from compile-time check.</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='define-theme-type' class='heading'>Define Theme Type</h3>
+
+<p>You can introduce your theme type by making <code>class</code> or <code>struct</code> conform to <code><a href="Protocols/CrystalThemeType.html">CrystalThemeType</a></code> protocol. With this protocol, you have to implement a static property to return the default theme.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">AppTheme</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">textColor</span><span class="p">:</span> <span class="kt">UIColor</span>
+    <span class="k">var</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">AppTheme</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
+    <span class="c1">// Return the default theme.</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">var</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">Self</span><span class="o">.</span><span class="n">light</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">light</span><span class="p">:</span> <span class="kt">AppTheme</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kt">AppTheme</span><span class="p">(</span>
+            <span class="nv">textColor</span><span class="p">:</span> <span class="o">.</span><span class="n">black</span><span class="p">,</span>
+            <span class="nv">backgroundColor</span><span class="p">:</span> <span class="o">.</span><span class="n">white</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">dark</span><span class="p">:</span> <span class="kt">AppTheme</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kt">AppTheme</span><span class="p">(</span>
+            <span class="nv">textColor</span><span class="p">:</span> <span class="o">.</span><span class="n">white</span><span class="p">,</span>
+            <span class="nv">backgroundColor</span><span class="p">:</span> <span class="o">.</span><span class="n">black</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='make-compatible' class='heading'>Make Compatible</h3>
+
+<p>In order to tell Crystal about your theme type:</p>
+
+<ul>
+<li>Make <code><a href="Classes/Crystal.html">Crystal</a></code> conform to <code><a href="Protocols/CrystalDetermined.html">CrystalDetermined</a></code>.</li>
+<li>Make any type conform to <code><a href="Protocols/CrystalDetermined.html">CrystalDetermined</a></code> according to your needs.</li>
+</ul>
+
+<p>Use <code>typealias</code> to determine the concrete theme type.</p>
+<pre class="highlight swift"><code><span class="c1">// Required. Determine the concrete theme type.</span>
+<span class="kd">extension</span> <span class="kt">Crystal</span><span class="p">:</span> <span class="kt">CrystalDetermined</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Theme</span> <span class="o">=</span> <span class="kt">AppTheme</span>
+<span class="p">}</span>
+
+<span class="c1">// Optional. Make any type compatible as you need.</span>
+<span class="kd">extension</span> <span class="kt">UIView</span><span class="p">:</span> <span class="kt">CrystalCompatible</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Theme</span> <span class="o">=</span> <span class="kt">AppTheme</span>
+<span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">UIBarButtonItem</span><span class="p">:</span> <span class="kt">CrystalCompatible</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Theme</span> <span class="o">=</span> <span class="kt">AppTheme</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Any object that conforms to <code><a href="Protocols/CrystalCompatible.html">CrystalCompatible</a></code> protocol has a <code>cst</code> namespace for exposing Crystal methods.</p>
+<h3 id='apply-theme' class='heading'>Apply Theme</h3>
+
+<p>Use the <code>apply(key:_:)</code> method to apply theme. The <code>key</code> parameter can be omitted and the default  <code>key</code> value will be used.</p>
+<pre class="highlight swift"><code><span class="c1">// Apply theme to a button.</span>
+<span class="n">doneButton</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="n">apply</span> <span class="p">{</span> <span class="n">button</span><span class="p">,</span> <span class="n">theme</span> <span class="k">in</span>
+    <span class="n">button</span><span class="o">.</span><span class="nf">setTitleColor</span><span class="p">(</span><span class="n">theme</span><span class="o">.</span><span class="n">textColor</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// Apply theme to a custom view.</span>
+<span class="n">cardView</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="n">apply</span> <span class="p">{</span> <span class="n">card</span><span class="p">,</span> <span class="n">theme</span> <span class="k">in</span> 
+    <span class="n">card</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="n">theme</span><span class="o">.</span><span class="n">backgroundColor</span>
+    <span class="n">card</span><span class="o">.</span><span class="n">titleColor</span> <span class="o">=</span> <span class="n">theme</span><span class="o">.</span><span class="n">textColor</span>
+<span class="p">}</span>
+<span class="c1">// Shorthand argument names.</span>
+<span class="n">imageView</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="n">apply</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="nv">$1</span><span class="o">.</span><span class="n">textColor</span> <span class="p">}</span>
+</code></pre>
+
+<p>When you call this method on an object multiple times, the <code>key</code> parameter is used to distinguish different calls. If the same <code>key</code> value is used, only the last call takes effect. This behavior is intended to avoid unintentional and redundant calls.</p>
+<pre class="highlight swift"><code><span class="c1">// Set font.</span>
+<span class="n">textLabel</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="nf">apply</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"font"</span><span class="p">)</span> <span class="p">{</span> <span class="n">label</span><span class="p">,</span> <span class="n">theme</span> <span class="k">in</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">theme</span><span class="o">.</span><span class="n">font</span>
+<span class="p">}</span>
+<span class="c1">// Set text color. Will be discarded.</span>
+<span class="n">textLabel</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="nf">apply</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"text color"</span><span class="p">)</span> <span class="p">{</span> <span class="n">label</span><span class="p">,</span> <span class="n">theme</span> <span class="k">in</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">textColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">black</span>
+<span class="p">}</span>
+<span class="c1">// Overwrite the previous call.</span>
+<span class="n">textLabel</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="nf">apply</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"text color"</span><span class="p">)</span> <span class="p">{</span> <span class="n">label</span><span class="p">,</span> <span class="n">theme</span> <span class="k">in</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">textColor</span> <span class="o">=</span> <span class="n">theme</span><span class="o">.</span><span class="n">textColor</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='change-theme' class='heading'>Change Theme</h3>
+
+<p>Use the <code>setTheme(_:animated:)</code> method to change theme.</p>
+<pre class="highlight swift"><code><span class="c1">// Change theme with animation.</span>
+<span class="kt">Crystal</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setTheme</span><span class="p">(</span><span class="o">.</span><span class="n">dark</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
