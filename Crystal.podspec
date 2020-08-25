@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Crystal"
-  spec.version      = "0.0.2"
+  spec.version      = "1.0.0"
   spec.summary      = "A lightweight and intuitive theme manager for iOS."
 
   spec.description  = <<-DESC
