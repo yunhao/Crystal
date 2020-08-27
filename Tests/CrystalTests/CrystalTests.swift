@@ -15,15 +15,16 @@ class CrystalTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Restore default theme.
-        Crystal.shared.underlyingTheme = nil
-        Crystal.shared.pool.removeAll()
-        AppTheme.underlyingDefaultTheme = .light
-        
         textLabel = UILabel()
     }
 
-    override func tearDown() {}
+    override func tearDown() {
+        super.tearDown()
+        textLabel = nil
+        // Restore default theme.
+        Crystal.shared.underlyingTheme = nil
+        AppTheme.underlyingDefaultTheme = .light
+    }
     
     func testDefaultTheme() throws {
         // The `default` property must be the determined concrete theme type.
@@ -92,16 +93,14 @@ class CrystalTests: XCTestCase {
             }
             labels.append(label)
         }
-        // Dictionary elements will not be removed automatically when the object is deallocated.
-        XCTAssertEqual(Crystal.shared.pool.count, total)
+        
+        XCTAssertEqual(Crystal.shared.mapTable.count, total)
         
         for i in 0..<total {
             labels[i] = nil
         }
         
-        Crystal.shared.pool.forEachObject { _ in
-            // `forEachObject` will remove outdated dictionary elements.
-        }
-        XCTAssertEqual(Crystal.shared.pool.count, 0)
+        // Map table elements will be removed automatically when the object is deallocated.
+        XCTAssertEqual(Crystal.shared.mapTable.count, 0)
     }
 }

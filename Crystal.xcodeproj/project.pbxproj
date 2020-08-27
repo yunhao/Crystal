@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		312ECEC624E246EE00CA99CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECEC424E245D700CA99CC /* Extensions.swift */; };
-		312ECF0924E2DFA100CA99CC /* WeakKeyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECF0824E2DFA100CA99CC /* WeakKeyDictionary.swift */; };
-		312ECF4A24E4E2B700CA99CC /* WeakKeyDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECF4924E4E2B700CA99CC /* WeakKeyDictionaryTests.swift */; };
+		312ECF0924E2DFA100CA99CC /* WeakKeyMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECF0824E2DFA100CA99CC /* WeakKeyMapTable.swift */; };
+		312ECF4A24E4E2B700CA99CC /* WeakKeyMapTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312ECF4924E4E2B700CA99CC /* WeakKeyMapTableTests.swift */; };
 		3176623A24DEB6BD00C3F43F /* Crystal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3176623024DEB6BD00C3F43F /* Crystal.framework */; };
 		3176623F24DEB6BD00C3F43F /* CrystalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3176623E24DEB6BD00C3F43F /* CrystalTests.swift */; };
 		3176624124DEB6BD00C3F43F /* Crystal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3176623324DEB6BD00C3F43F /* Crystal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,8 +30,8 @@
 
 /* Begin PBXFileReference section */
 		312ECEC424E245D700CA99CC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		312ECF0824E2DFA100CA99CC /* WeakKeyDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakKeyDictionary.swift; sourceTree = "<group>"; };
-		312ECF4924E4E2B700CA99CC /* WeakKeyDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeakKeyDictionaryTests.swift; path = Tests/CrystalTests/WeakKeyDictionaryTests.swift; sourceTree = SOURCE_ROOT; };
+		312ECF0824E2DFA100CA99CC /* WeakKeyMapTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakKeyMapTable.swift; sourceTree = "<group>"; };
+		312ECF4924E4E2B700CA99CC /* WeakKeyMapTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeakKeyMapTableTests.swift; path = Tests/CrystalTests/WeakKeyMapTableTests.swift; sourceTree = SOURCE_ROOT; };
 		3176623024DEB6BD00C3F43F /* Crystal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Crystal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3176623324DEB6BD00C3F43F /* Crystal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crystal.h; sourceTree = "<group>"; };
 		3176623424DEB6BD00C3F43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				3176630E24DEBCCA00C3F43F /* Crystal.swift */,
 				31BB326624E0ECE4003A5517 /* Crystalline.swift */,
 				31BB326824E0ED1F003A5517 /* CrystalThemeType.swift */,
-				312ECF0824E2DFA100CA99CC /* WeakKeyDictionary.swift */,
+				312ECF0824E2DFA100CA99CC /* WeakKeyMapTable.swift */,
 				3176623324DEB6BD00C3F43F /* Crystal.h */,
 				3176623424DEB6BD00C3F43F /* Info.plist */,
 			);
@@ -106,7 +106,7 @@
 			children = (
 				312ECEC324E245CC00CA99CC /* Supports */,
 				3176623E24DEB6BD00C3F43F /* CrystalTests.swift */,
-				312ECF4924E4E2B700CA99CC /* WeakKeyDictionaryTests.swift */,
+				312ECF4924E4E2B700CA99CC /* WeakKeyMapTableTests.swift */,
 				3176624024DEB6BD00C3F43F /* Info.plist */,
 			);
 			path = CrystalTests;
@@ -233,7 +233,7 @@
 				3176630F24DEBCCA00C3F43F /* Crystal.swift in Sources */,
 				31BB326724E0ECE4003A5517 /* Crystalline.swift in Sources */,
 				31BB326924E0ED1F003A5517 /* CrystalThemeType.swift in Sources */,
-				312ECF0924E2DFA100CA99CC /* WeakKeyDictionary.swift in Sources */,
+				312ECF0924E2DFA100CA99CC /* WeakKeyMapTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +243,7 @@
 			files = (
 				3176623F24DEB6BD00C3F43F /* CrystalTests.swift in Sources */,
 				312ECEC624E246EE00CA99CC /* Extensions.swift in Sources */,
-				312ECF4A24E4E2B700CA99CC /* WeakKeyDictionaryTests.swift in Sources */,
+				312ECF4A24E4E2B700CA99CC /* WeakKeyMapTableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

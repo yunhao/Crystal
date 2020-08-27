@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CrystallineType {
+protocol CrystallineType: AnyObject {
     /// Reapply the theme to the object.
     func reapply()
 }
