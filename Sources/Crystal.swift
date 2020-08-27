@@ -16,8 +16,8 @@ public class Crystal {
     /// to store a theme of any possible types.
     var underlyingTheme: CrystalThemeType?
     
-    /// A key-value dictionary. The key is a `CrystalCompatible` object and the value is a  `Crystalline` object.
-    var pool = WeakKeyDictionary<AnyObject, AnyObject>()
+    /// A key-value map table. The key is a `CrystalCompatible` object and the value is a  `Crystalline` object.
+    var mapTable = WeakKeyMapTable<AnyObject, CrystallineType>()
     
     init() {}
     
@@ -82,8 +82,8 @@ extension CrystalDetermined where Self: Crystal {
     
     /// Apply theme to all crystal compatible objects.
     func performThemeChange(to theme: CrystalThemeType) {
-        Crystal.shared.pool.forEachObject { object in
-            let crystalline = object as! CrystallineType
+        Crystal.shared.mapTable.forEach { key, crystalline in
+            guard let _ = key.object else { return }
             crystalline.reapply()
         }
     }
@@ -108,12 +108,12 @@ public protocol CrystalCompatible: AnyObject {
 extension CrystalCompatible {
     public var cst: Crystalline<Self, Theme> {
         // Return the exist object.
-        if let crystal = Crystal.shared.pool[self] as? Crystalline<Self, Theme> {
+        if let crystal = Crystal.shared.mapTable[self] as? Crystalline<Self, Theme> {
             return crystal
         }
         // Create and return a new `Crystalline` object.
         let crystal = Crystalline<Self, Theme>(self)
-        Crystal.shared.pool[self] = crystal
+        Crystal.shared.mapTable[self] = crystal
         return crystal
     }
 }
