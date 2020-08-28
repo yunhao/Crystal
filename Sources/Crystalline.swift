@@ -30,18 +30,29 @@ public class Crystalline<Target: AnyObject, Theme: CrystalThemeType>: Crystallin
         self.target = target
     }
     
-    /// Apply the theme to the target object with a closure.
+    /// Apply the theme to the target object in a closure.
+    ///
+    /// If you call this method multiple times on the same object, only the last call will take effect.
+    ///
     /// - Parameters:
-    ///   - key: An unique key used to distinguish different closures.
-    ///   - closure: A clourse indicates how to apply theme.
-    ///   - target: The target object.
+    ///   - closure: A clourse where you apply the theme.
+    ///   - target: The target object you want to apply the theme to.
     ///   - theme: The theme.
+    public func apply(_ closure: @escaping (_ target: Target, _ theme: Theme) -> Void) {
+        apply(key: "_default", closure)
+    }
+    
+    /// Apply the theme to the target object in a closure.
     ///
     /// If you call this method multiple times with the same key, only the last one will take effect.
-    public func apply(key: String? = nil, _ closure: @escaping (_ target: Target, _ theme: Theme) -> Void) {
+    ///
+    /// - Parameters:
+    ///   - key: An unique key used to distinguish different closures.
+    ///   - closure: A clourse where you apply the theme.
+    ///   - target: The target object you want to apply the theme to.
+    ///   - theme: The theme.
+    public func apply(key: String, _ closure: @escaping (_ target: Target, _ theme: Theme) -> Void) {
         guard let target = target else { return }
-        
-        let key = key ?? "_default"
         closures[key] = closure
         closure(target, theme)
     }

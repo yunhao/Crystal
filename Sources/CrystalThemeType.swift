@@ -29,8 +29,10 @@ public protocol CrystalThemeType {
     /// The default theme.
     ///
     /// Crystal uses this property to determine the default theme when you neither assign a theme to `Crystal.shared.theme`
-    /// property nor call `setTheme(_:animated:)` method. This property will only be called once when the first time you call
-    /// `apply(key:_:)` method. After that, changing the value of this property has no effect on Crystal. If you want to apply a
-    /// different theme to the app, use `Crystal.shared.setTheme(_:animated:)` instead.
+    /// property nor call `setTheme(_:animated:)` method.
+    ///
+    /// This property will only be called once when the first time you call `Crystalline.apply(_:)` or `Crystalline.apply(key:_:)`
+    /// method. After that, changing the value of this property has no effect on Crystal. If you want to apply a different theme to the
+    /// app, use `Crystal.shared.setTheme(_:animated:)` instead.
     static var `default`: CrystalThemeType { get }
 }

@@ -29,10 +29,11 @@ public class Crystal {
     init() {}
     
     /// Return the theme of desired type.
-    /// - Returns: A theme.
     ///
     /// This method should not fail at any time. It's the developer's responsibility to guarantee that there is only one concrete theme
     /// type in Crystal.
+    ///
+    /// - Returns: A theme of desired type.
     func desiredTheme<T: CrystalThemeType>() -> T {
         guard let underlyingTheme = underlyingTheme else {
             // if `underlyingTheme` is `nil`, initialize it with the default theme.
@@ -65,6 +66,7 @@ public protocol CrystalDetermined: Crystal {
     var theme: Theme { get set }
     
     /// Set the theme.
+    /// 
     /// - Parameters:
     ///   - theme: A theme to be adopted.
     ///   - animated: `true` to animate the theme change, `false` to make the change immediate.
