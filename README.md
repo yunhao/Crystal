@@ -85,7 +85,7 @@ extension AppTheme: CrystalThemeType {
 
 In order to tell Crystal about your theme type:
 - Make `Crystal` conform to `CrystalDetermined`. 
-- Make any type conform to `CrystalDetermined` according to your needs.
+- Make any type conform to `CrystalCompatible` according to your needs.
 
 Use `typealias` to determine the concrete theme type.
 
@@ -144,7 +144,7 @@ Crystal.shared.theme = .dark
 When using [CocoaPods](https://cocoapods.org), add the following to your `Podfile`:
 
 ```ruby
-pod 'Crystal'
+pod 'Crystal', '~> 1.1'
 ```
 
 ### Carthage
@@ -160,7 +160,7 @@ github "yunhao/Crystal"
 Add the following to the dependencies section of your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/yunhao/Crystal.git", from: "1.0.0")
+.package(url: "https://github.com/yunhao/Crystal.git", from: "1.1.0")
 ```
 
 ## Contribution
