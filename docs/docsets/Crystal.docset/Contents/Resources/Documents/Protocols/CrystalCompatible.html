@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Crystal v1.0.0 Docs
+          Crystal v1.1.0 Docs
         </a>
-         (75% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -96,7 +96,7 @@
                 </div>
               </div>
             <p>A type that has crystal extensions. You can use <code>cst</code> property to get extension methods.</p>
-<pre class="highlight swift"><code><span class="c1">// Make `UIView` conform to `CrystalCompatible` to gain Crystal ability.</span>
+<pre class="highlight swift"><code><span class="c1">// Make `UIView` conform to `CrystalCompatible`.</span>
 <span class="kd">extension</span> <span class="kt">UIView</span><span class="p">:</span> <span class="kt">CrystalCompatible</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Theme</span><span class="p">:</span> <span class="kt">AppTheme</span>
 <span class="p">}</span>
@@ -105,7 +105,7 @@
 <p>When conforming to <code>CrystalCompatible</code>, you have to determine the concrete theme type in the conformance.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/Crystal.swift#L100-L106">Show on GitHub</a>
+                <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/Crystal.swift#L95-L98">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -114,36 +114,6 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Crystal0A10CompatibleP6TargetQa"></a>
-                    <a name="//apple_ref/swift/Alias/Target" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Crystal0A10CompatibleP6TargetQa">Target</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Target</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/Crystal.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -157,7 +127,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The theme type that is determined when making protocol conformance.</p>
 
                       </div>
                       <div class="declaration">
@@ -169,7 +139,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/Crystal.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/Crystal.swift#L97">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -177,12 +147,12 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Crystal0A10CompatibleP3cstAA11CrystallineCy6TargetQz5ThemeQzGvp"></a>
+                    <a name="/s:7Crystal0A10CompatiblePAAE3cstAA11CrystallineCyx5ThemeQzGvp"></a>
                     <a name="//apple_ref/swift/Property/cst" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Crystal0A10CompatibleP3cstAA11CrystallineCy6TargetQz5ThemeQzGvp">cst</a>
+                    <a class="token" href="#/s:7Crystal0A10CompatiblePAAE3cstAA11CrystallineCyx5ThemeQzGvp">cst</a>
                     </code>
                       <span class="declaration-note">
-                        Default implementation
+                        Extension method
                       </span>
                   </div>
                   <div class="height-container">
@@ -190,23 +160,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Crystal extensions.</p>
+                        <p>Crystal namespace used to expose available methods and properties.</p>
 
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cst</span><span class="p">:</span> <span class="kt"><a href="../Classes/Crystalline.html">Crystalline</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/CrystalCompatible.html#/s:7Crystal0A10CompatibleP6TargetQa">Target</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/CrystalCompatible.html#/s:7Crystal0A10CompatibleP5ThemeQa">Theme</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cst</span><span class="p">:</span> <span class="kt"><a href="../Classes/Crystalline.html">Crystalline</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt"><a href="../Protocols/CrystalCompatible.html#/s:7Crystal0A10CompatibleP5ThemeQa">Theme</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/Crystal.swift#L105">Show on GitHub</a>
+                        <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/Crystal.swift#L102-L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -219,7 +185,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

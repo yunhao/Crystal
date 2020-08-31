@@ -1,40 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/yunhao/Developer/iOS/Crystal/Sources/Crystal.swift",
-      "line": 11,
-      "symbol": "Crystal",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yunhao/Developer/iOS/Crystal/Sources/Crystal.swift",
-      "line": 13,
-      "symbol": "Crystal.shared",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yunhao/Developer/iOS/Crystal/Sources/Crystal.swift",
-      "line": 52,
-      "symbol": "CrystalDetermined.Theme",
-      "symbol_kind": "source.lang.swift.decl.associatedtype",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yunhao/Developer/iOS/Crystal/Sources/Crystal.swift",
-      "line": 101,
-      "symbol": "CrystalCompatible.Target",
-      "symbol_kind": "source.lang.swift.decl.associatedtype",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yunhao/Developer/iOS/Crystal/Sources/Crystal.swift",
-      "line": 102,
-      "symbol": "CrystalCompatible.Theme",
-      "symbol_kind": "source.lang.swift.decl.associatedtype",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/yunhao/Developer/iOS/Crystal"
 }

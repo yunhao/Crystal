@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Crystal v1.0.0 Docs
+          Crystal v1.1.0 Docs
         </a>
-         (75% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -117,9 +117,9 @@
 <span class="p">}</span>
 </code></pre>
 
-<p>Although this protocol is designed for <code><a href="Classes/Crystal.html">Crystal</a></code> class, <code><a href="Classes/Crystal.html">Crystal</a></code> class does not conform to <code>CrystalDetermined</code> protocol by default.
-When using this library, it&rsquo;s your responsibility to conform <code><a href="Classes/Crystal.html">Crystal</a></code> class to <code>CrystalDetermined</code> protocol, in order to determine the
-concrete theme type.</p>
+<p>Although this protocol is designed for <code><a href="Classes/Crystal.html">Crystal</a></code> class, <code><a href="Classes/Crystal.html">Crystal</a></code> class does not conform to <code>CrystalDetermined</code> protocol
+by default. When using this library, it&rsquo;s your responsibility to make <code><a href="Classes/Crystal.html">Crystal</a></code> class conform to <code>CrystalDetermined</code> protocol,
+in order to determine the concrete theme type.</p>
 
                         <a href="Protocols/CrystalDetermined.html" class="slightly-smaller">See more</a>
                       </div>
@@ -132,7 +132,7 @@ concrete theme type.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/Crystal.swift#L51-L64">Show on GitHub</a>
+                        <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/Crystal.swift#L59-L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -151,7 +151,7 @@ concrete theme type.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A type that has crystal extensions. You can use <code>cst</code> property to get extension methods.</p>
-<pre class="highlight swift"><code><span class="c1">// Make `UIView` conform to `CrystalCompatible` to gain Crystal ability.</span>
+<pre class="highlight swift"><code><span class="c1">// Make `UIView` conform to `CrystalCompatible`.</span>
 <span class="kd">extension</span> <span class="kt">UIView</span><span class="p">:</span> <span class="kt">CrystalCompatible</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Theme</span><span class="p">:</span> <span class="kt">AppTheme</span>
 <span class="p">}</span>
@@ -170,7 +170,7 @@ concrete theme type.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/Crystal.swift#L100-L106">Show on GitHub</a>
+                        <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/Crystal.swift#L95-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -197,7 +197,7 @@ concrete theme type.</p>
         <span class="k">return</span> <span class="kt">AppTheme</span><span class="p">(</span><span class="nv">textColor</span><span class="p">:</span> <span class="o">.</span><span class="n">blue</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">var</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">entry</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">Self</span><span class="o">.</span><span class="n">light</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -217,7 +217,7 @@ otherwise some inconsistent errors may occur.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/CrystalThemeType.swift#L28-L36">Show on GitHub</a>
+                        <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/CrystalThemeType.swift#L28-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -230,7 +230,7 @@ otherwise some inconsistent errors may occur.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

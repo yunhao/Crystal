@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Crystal v1.0.0 Docs
+          Crystal v1.1.0 Docs
         </a>
-         (75% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -104,7 +104,7 @@
         <span class="k">return</span> <span class="kt">AppTheme</span><span class="p">(</span><span class="nv">textColor</span><span class="p">:</span> <span class="o">.</span><span class="n">blue</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">var</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">entry</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">Self</span><span class="o">.</span><span class="n">light</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -114,7 +114,7 @@
 otherwise some inconsistent errors may occur.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/CrystalThemeType.swift#L28-L36">Show on GitHub</a>
+                <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/CrystalThemeType.swift#L28-L35">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -126,9 +126,9 @@ otherwise some inconsistent errors may occur.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Crystal0A9ThemeTypeP7defaultAaB_pvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/default" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Crystal0A9ThemeTypeP7defaultAaB_pvpZ">default</a>
+                    <a name="/s:7Crystal0A9ThemeTypeP5entryAaB_pvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/entry" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Crystal0A9ThemeTypeP5entryAaB_pvpZ">entry</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,24 +136,23 @@ otherwise some inconsistent errors may occur.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The default theme.</p>
+                        <p>The theme that Crystal applies to your app when the app launches.</p>
 
-<p>Crystal uses this property to determine the default theme when you neither assign a theme to <code>Crystal.shared.theme</code>
-property nor call <code>setTheme(_:animated:)</code> method. This property will only be called once when the first time you call
-<code>apply(key:_:)</code> method. After that, changing the value of this property has no effect on Crystal. If you want to apply a
-different theme to the app, use <code>Crystal.shared.setTheme(_:animated:)</code> instead.</p>
+<p>In practice, this property should represent the user&rsquo;s preferred theme. Crystal applies this theme to the app when the app launches.
+If you want to apply a different theme to the app later, assign the theme to <code>Crystal.shared.theme</code> property or call
+<code>Crystal.shared.setTheme(_:animated:)</code> method.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">var</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">entry</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/yunhao/Crystal/tree/v1.0.0/Sources/CrystalThemeType.swift#L35">Show on GitHub</a>
+                        <a href="https://github.com/yunhao/Crystal/tree/v1.1.0/Sources/CrystalThemeType.swift#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -166,7 +165,7 @@ different theme to the app, use <code>Crystal.shared.setTheme(_:animated:)</code
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

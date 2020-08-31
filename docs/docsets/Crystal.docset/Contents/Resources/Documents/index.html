@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Crystal v1.0.0 Docs
+          Crystal v1.1.0 Docs
         </a>
-         (75% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -140,18 +140,13 @@
 <p>To use Crystal, there are three steps: <a href="#Define-Theme-Type">Define Theme Type</a> -&gt; <a href="#Make-Compatible">Make Compatible</a> -&gt; <a href="#Apply-Theme">Apply Theme</a></p>
 <h3 id='setp-1-define-theme-type' class='heading'>Setp 1 - Define Theme Type</h3>
 
-<p>You can introduce your theme type by making <code>class</code> or <code>struct</code> conform to <code><a href="Protocols/CrystalThemeType.html">CrystalThemeType</a></code> protocol. With this protocol, you have to implement a static property to return the default theme.</p>
-<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">AppTheme</span> <span class="p">{</span>
+<p>You can introduce your theme type by making <code>class</code> or <code>struct</code> conform to <code><a href="Protocols/CrystalThemeType.html">CrystalThemeType</a></code> protocol. With this protocol, you have to implement a static property to return the entry theme.</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AppTheme</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">textColor</span><span class="p">:</span> <span class="kt">UIColor</span>
     <span class="k">var</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span>
 <span class="p">}</span>
 
 <span class="kd">extension</span> <span class="kt">AppTheme</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
-    <span class="c1">// Return the default theme.</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">var</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">Self</span><span class="o">.</span><span class="n">light</span>
-    <span class="p">}</span>
-
     <span class="kd">static</span> <span class="k">var</span> <span class="nv">light</span><span class="p">:</span> <span class="kt">AppTheme</span> <span class="p">{</span>
         <span class="k">return</span> <span class="kt">AppTheme</span><span class="p">(</span>
             <span class="nv">textColor</span><span class="p">:</span> <span class="o">.</span><span class="n">black</span><span class="p">,</span>
@@ -164,6 +159,11 @@
             <span class="nv">textColor</span><span class="p">:</span> <span class="o">.</span><span class="n">white</span><span class="p">,</span>
             <span class="nv">backgroundColor</span><span class="p">:</span> <span class="o">.</span><span class="n">black</span>
         <span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Return the entry theme.</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">entry</span><span class="p">:</span> <span class="kt">CrystalThemeType</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">Self</span><span class="o">.</span><span class="n">light</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -208,9 +208,9 @@
 <span class="n">imageView</span><span class="o">.</span><span class="n">cst</span><span class="o">.</span><span class="n">apply</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="nv">$1</span><span class="o">.</span><span class="n">textColor</span> <span class="p">}</span>
 </code></pre>
 
-<p>Use the <code>Crystal.shared.setTheme(_:animated:)</code> method to change theme:</p>
-<pre class="highlight swift"><code><span class="c1">// Change theme with animation.</span>
-<span class="kt">Crystal</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setTheme</span><span class="p">(</span><span class="o">.</span><span class="n">dark</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<p>Assign a new value to <code>Crystal.shared.theme</code> to change theme:</p>
+<pre class="highlight swift"><code><span class="c1">// Change theme.</span>
+<span class="kt">Crystal</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">theme</span> <span class="o">=</span> <span class="o">.</span><span class="n">dark</span>
 </code></pre>
 <h2 id='requirements' class='heading'>Requirements</h2>
 
@@ -248,7 +248,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/yunhao" target="_blank" rel="external">yunhao</a>. All rights reserved. (Last updated: 2020-08-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
