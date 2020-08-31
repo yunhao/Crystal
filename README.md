@@ -51,20 +51,15 @@ To use Crystal, there are three steps: [Define Theme Type](#Define-Theme-Type) -
 
 ### Setp 1 - Define Theme Type
 
-You can introduce your theme type by making `class` or `struct` conform to `CrystalThemeType` protocol. With this protocol, you have to implement a static property to return the default theme.
+You can introduce your theme type by making `class` or `struct` conform to `CrystalThemeType` protocol. With this protocol, you have to implement a static property to return the entry theme.
 
 ```swift
-struct AppTheme {
+public struct AppTheme {
     var textColor: UIColor
     var backgroundColor: UIColor
 }
 
 extension AppTheme: CrystalThemeType {
-    // Return the default theme.
-    public static var `default`: CrystalThemeType {
-        return Self.light
-    }
-
     static var light: AppTheme {
         return AppTheme(
             textColor: .black,
@@ -77,6 +72,11 @@ extension AppTheme: CrystalThemeType {
             textColor: .white,
             backgroundColor: .black
         )
+    }
+
+    // Return the entry theme.
+    public static var entry: CrystalThemeType {
+        return Self.light
     }
 }
 ```
@@ -125,11 +125,11 @@ cardView.cst.apply { card, theme in
 imageView.cst.apply { $0.tintColor = $1.textColor }
 ```
 
-Use the `Crystal.shared.setTheme(_:animated:)` method to change theme:
+Assign a new value to `Crystal.shared.theme` to change theme:
 
 ```swift
-// Change theme with animation.
-Crystal.shared.setTheme(.dark, animated: true)
+// Change theme.
+Crystal.shared.theme = .dark
 ```
 
 ## Requirements

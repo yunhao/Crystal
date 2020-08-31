@@ -70,22 +70,22 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func changeTheme(_ sender: FlatButton) {
-        var theme: AppTheme?
+        var theme: AppTheme
         
         switch sender.name {
         case "light": theme = .light
         case "dark": theme = .dark
         case "sea": theme = .sea
         case "forest": theme = .forest
-        default: break
+        default: fatalError()
         }
         
-        if let theme = theme {
-            Crystal.shared.setTheme(theme, animated: shouldAnimateTheme)
+        UIView.animate(withDuration: 0.5) {
+            Crystal.shared.theme = theme
         }
     }
     
     @IBAction func refreshTheme(_ sender: Any) {
-        Crystal.shared.setTheme(.light, animated: true)
+        Crystal.shared.theme = .light
     }
 }

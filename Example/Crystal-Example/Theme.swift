@@ -42,7 +42,7 @@ public struct AppTheme: CrystalThemeType {
 }
 
 extension AppTheme {
-    public static var `default`: CrystalThemeType {
+    public static var entry: CrystalThemeType {
         return Self.light
     }
     

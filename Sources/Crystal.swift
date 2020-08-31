@@ -36,8 +36,8 @@ public class Crystal {
     /// - Returns: A theme of desired type.
     func desiredTheme<T: CrystalThemeType>() -> T {
         guard let underlyingTheme = underlyingTheme else {
-            // if `underlyingTheme` is `nil`, initialize it with the default theme.
-            let theme = T.default
+            // if `underlyingTheme` is `nil`, initialize it with the entry theme.
+            let theme = T.entry
             self.underlyingTheme = theme
             return theme as! T
         }
@@ -64,28 +64,13 @@ public protocol CrystalDetermined: Crystal {
     ///
     /// Assign a new value to this property is the same as calling `setTheme(_:animated:)`.
     var theme: Theme { get set }
-    
-    /// Set the theme.
-    /// 
-    /// - Parameters:
-    ///   - theme: A theme to be adopted.
-    ///   - animated: `true` to animate the theme change, `false` to make the change immediate.
-    func setTheme(_ theme: Theme, animated: Bool)
 }
 
 extension CrystalDetermined where Self: Crystal {
     public var theme: Theme {
         get { desiredTheme() }
-        set { setTheme(newValue, animated: false) }
-    }
-    
-    public func setTheme(_ theme: Theme, animated: Bool) {
-        self.underlyingTheme = theme
-        if animated {
-            UIView.animate(withDuration: 0.5) {
-                self.performThemeChange(to: theme)
-            }
-        } else {
+        set {
+            underlyingTheme = newValue
             performThemeChange(to: theme)
         }
     }
