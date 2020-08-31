@@ -38,11 +38,11 @@ public struct AppTheme: CrystalThemeType, Equatable {
         )
     }
     
-    /// Change this value to triger `default` property change.
-    static var underlyingDefaultTheme: Self = .dark
+    /// Change this value to triger entry property change.
+    static var underlyingEntryTheme: Self = .dark
     
-    public static var `default`: CrystalThemeType {
-        return Self.underlyingDefaultTheme
+    public static var entry: CrystalThemeType {
+        return Self.underlyingEntryTheme
     }
 }
 

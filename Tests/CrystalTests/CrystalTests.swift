@@ -21,25 +21,25 @@ class CrystalTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         textLabel = nil
-        // Restore default theme.
+        // Restore entry theme.
         Crystal.shared.underlyingTheme = nil
-        AppTheme.underlyingDefaultTheme = .light
+        AppTheme.underlyingEntryTheme = .light
     }
     
-    func testDefaultTheme() throws {
-        // The `default` property must be the determined concrete theme type.
-        let defaultTheme = try XCTUnwrap(AppTheme.default as? Crystal.Theme)
-        // Crystal uses the default theme automatically.
-        XCTAssertEqual(Crystal.shared.theme, defaultTheme)
+    func testEntryTheme() throws {
+        // The entry property must be the determined concrete theme type.
+        let entryTheme = try XCTUnwrap(AppTheme.entry as? Crystal.Theme)
+        // Crystal uses the entry theme automatically.
+        XCTAssertEqual(Crystal.shared.theme, entryTheme)
     }
     
-    func testDefaultThemeChangeNoEffect() {
-        // Apply default theme.
+    func testEntryThemeChangeNoEffect() {
+        // Apply entry theme.
         textLabel.cst.apply {
             $0.backgroundColor = $1.backgroundColor
         }
-        // Change default theme and reapply.
-        AppTheme.underlyingDefaultTheme = .dark
+        // Change entry theme and reapply.
+        AppTheme.underlyingEntryTheme = .dark
         textLabel.cst.reapply()
         
         XCTAssertEqual(textLabel.backgroundColor, AppTheme.light.backgroundColor)
@@ -51,7 +51,7 @@ class CrystalTests: XCTestCase {
             $0.backgroundColor = $1.backgroundColor
         }
         // Set a different theme.
-        Crystal.shared.setTheme(.dark, animated: false)
+        Crystal.shared.theme = .dark
         XCTAssertEqual(textLabel.backgroundColor, AppTheme.dark.backgroundColor)
     }
     
